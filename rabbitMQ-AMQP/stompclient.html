@@ -9,6 +9,7 @@
         function WebSocketTest() {
             
             if ("WebSocket" in window) {
+                console.log("OK")
                 var ws_stomp_display     = new WebSocket('ws://127.0.0.1:15674/ws');
                 var client_display = Stomp.over(ws_stomp_display);
                 var mq_queue_display    = "/exchange/exchange_ping/stream";

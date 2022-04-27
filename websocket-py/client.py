@@ -2,7 +2,8 @@ import asyncio
 import websockets
 
 async def binance():
-    async with websockets.connect("wss://stream.binance.com:9443/ws/USDTDAI@trade") as websocket:
+    # async with websockets.connect("wss://stream.binance.com:9443/ws/USDTDAI@trade") as websocket:
+    async with websockets.connect("ws://127.0.0.1:15674/ws") as websocket:
         # await websocket.send("Hello world!")
         async for message in websocket:
             print(message)
